@@ -278,7 +278,7 @@ async function initMap() {
   // Create markers.
   for (let i = 0; i < features.length; i++) {
 
-    const htmlcode = "<a href='https://vtedy.tasr.sk/zoom/" + features[i].content + "'><img src='https://vtedy.tasr.sk/api/item/" + features[i].content + "/thumbnail/'></a>";
+    const htmlcode = "<a href='https://vtedy.tasr.sk/zoom/" + features[i].content + "'><img src='https://vtedy.tasr.sk/api/item/" + features[i].content + "/thumbnail/1'></a>";
 
     const photo = document.createElement("div");
 
