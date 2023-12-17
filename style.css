@@ -17,7 +17,7 @@
   }
 
   /* HTML marker styles */
-.price-tag {
+.photo-tag {
   background-color: #4285F4;
   border-radius: 8px;
   color: #FFFFFF;
@@ -26,7 +26,7 @@
   position: relative;
 }
 
-.price-tag::after {
+.photo-tag::after {
   content: "";
   position: absolute;
   left: 50%;
