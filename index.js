@@ -279,7 +279,7 @@ async function initMap() {
   for (let i = 0; i < features.length; i++) {
 
     const htmlcode = "<img src='https://vtedy.tasr.sk/api/item/" + features[i].content + "/thumbnail/1'>";
-    const link = "https://vtedy.tasr.sk/zoom/" + features[i].content + "/";
+    const link = "https://vtedy.tasr.sk/zoom/" + features[i].content + "/view";
     const photo = document.createElement("div");
 
     photo.className = "photo-tag";
