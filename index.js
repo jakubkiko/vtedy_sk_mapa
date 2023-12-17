@@ -278,8 +278,8 @@ async function initMap() {
   // Create markers.
   for (let i = 0; i < features.length; i++) {
 
-    const htmlcode = "<a href='https://vtedy.tasr.sk/zoom/" + features[i].content + "'><img src='https://vtedy.tasr.sk/api/item/" + features[i].content + "/thumbnail/1'></a>";
-
+    const htmlcode = "<img src='https://vtedy.tasr.sk/api/item/" + features[i].content + "/thumbnail/1'>";
+    const link = "https://vtedy.tasr.sk/zoom/" + features[i].content;
     const photo = document.createElement("div");
 
     photo.className = "photo-tag";
@@ -290,6 +290,11 @@ async function initMap() {
       position: features[i].position,
       content: photo,
     });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      window.location.href = link;
+    });
+
   }
 
 
