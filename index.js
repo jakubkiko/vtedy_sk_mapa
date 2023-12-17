@@ -285,7 +285,7 @@ async function initMap() {
     photo.className = "photo-tag";
     photo.htmlcode = htmlcode;
 
-    const marker = marker = new AdvancedMarkerElement({
+    const marker = new AdvancedMarkerElement({
       map: map,
       position: features[i].position,
       content: photo,
