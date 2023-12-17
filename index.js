@@ -11,7 +11,7 @@ async function initMap() {
 
   // The map, centered at Uluru
   map = new Map(document.getElementById("map"), {
-    zoom: 20,
+    zoom: 10,
     center: position,
     mapId: "DEMO_MAP_ID",
   });
@@ -22,9 +22,8 @@ async function initMap() {
     position: position,
     title: "Uluru",
   });
-}
 
-var stylesArray = [
+  var stylesArray = [
   {
     "elementType": "geometry",
     "stylers": [
@@ -273,5 +272,5 @@ var stylesArray = [
     ]
   }
 ]
-
+ }
 initMap();
