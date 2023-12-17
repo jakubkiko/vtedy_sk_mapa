@@ -278,7 +278,7 @@ async function initMap() {
   // Create markers.
   for (let i = 0; i < features.length; i++) {
 
-    const htmlcode = "<img src='https://vtedy.tasr.sk/api/item/" + features[i].content + "/thumbnail/1'>";
+    const htmlcode = "<img width='50%' src='https://vtedy.tasr.sk/api/item/" + features[i].content + "/thumbnail/1'>";
     const link = "https://vtedy.tasr.sk/zoom/" + features[i].content + "/view";
     const photo = document.createElement("div");
 
@@ -296,7 +296,6 @@ async function initMap() {
     });
 
   }
-
 
   //Associate the styled map with the MapTypeId and set it to display.
   map.mapTypes.set("styled_map", styledMapType);
