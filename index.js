@@ -281,7 +281,7 @@ async function initMap() {
     htmlcode = "<a href='https://vtedy.tasr.sk/api/item/" + features[i].id + "/thumbnail/2'><img src='https://vtedy.tasr.sk/zoom/'" + features[i].id + "></a>"
 
     const marker = marker = new AdvancedMarkerElement({
-      map,
+      map: map,
       position: features[i].position,
       content: htmlcode,
     });
