@@ -4,7 +4,7 @@ let map;
 async function initMap() {
 
   // https://developers.google.com/maps/documentation/javascript/reference/top-level#MapsLibrary
-  const { StyledMapType } = await google.maps.importLibrary("StyledMapType");
+  const { StyledMapType } = await google.maps.importLibrary("maps");
   const styledMapType = new google.maps.StyledMapType(
     [
       { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
