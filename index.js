@@ -249,7 +249,7 @@ async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  // The map, centered at Uluru
+  // The map, centered at Dubravka
   map = new Map(document.getElementById("map"), {
     zoom: 15,
     center: position,
@@ -259,12 +259,34 @@ async function initMap() {
     },
   });
 
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "Uluru",
-  });
+  // The marker, positioned at POI from vtedy.tasr.sk
+  // link to album: https://vtedy.tasr.sk/zoom/261693/
+  // link to thumbnail: https://vtedy.tasr.sk/api/item/261693/thumbnail/2
+  // const marker = new AdvancedMarkerElement({
+  //   map: map,
+  //   position: position,
+  //   title: "Uluru",
+  // });
+
+  const features = [
+    {
+      position: new google.maps.LatLng(48.181, 17.043),
+      id: "261693",
+    },
+  ];
+
+  // Create markers.
+  for (let i = 0; i < features.length; i++) {
+
+    htmlcode = "<a href='https://vtedy.tasr.sk/api/item/" + features[i].id + "/thumbnail/2'><img src='https://vtedy.tasr.sk/zoom/'" + features[i].id + "></a>"
+
+    const marker = marker = new AdvancedMarkerElement({
+      map,
+      position: features[i].position,
+      content: htmlcode,
+    });
+  }
+
 
   //Associate the styled map with the MapTypeId and set it to display.
   map.mapTypes.set("styled_map", styledMapType);
